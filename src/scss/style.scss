@@ -11,8 +11,6 @@ $off-white: 	#fefefe;
 $light-grey: 	#b6b6b6;
 
 
-
-
 body {
 	font-family: latoregular, "Helvetica Neue", Helvetica, sans-serif, Arial; 
 	text-rendering: optimizeLegibility;
@@ -20,8 +18,32 @@ body {
 	line-height: 26px;
 	color: $dark-grey;
 	background-color: $off-white;
-	border-left: 70px solid $accent-color;
+	border-left: 5px solid $accent-color;
 	padding: 60px 15px 100px 15px;
+	transition: all 0.3s ease;
+	@media (min-width: $screen-sm-min) {
+		border-left-width: 70px;
+	}
+	a {
+		color: $accent-color;
+	}
+	a:hover {
+		color: $accent-color;
+	}
+
+}
+
+.logo {
+	@media (min-width: $screen-sm-min) {
+		transition: width 2s ease;
+		position: fixed;
+		z-index: 10;
+		margin: -51px 0 0 -81px;
+		img {
+			width: 60px;
+			height: auto;
+		}
+	}
 }
 
 .container {
@@ -50,20 +72,39 @@ header {
 		margin: 0;
 		a {
 			color: $dark-grey;
+			//background-color: rgba(255,255,255,0.8);
+			text-shadow: 
+			0px 0px 20px rgba(255, 255, 255, 1),
+			0px 0px 20px rgba(255, 255, 255, 1),
+			0px 0px 20px rgba(255, 255, 255, 1),
+			0px 0px 20px rgba(255, 255, 255, 1),
+			0px 0px 20px rgba(255, 255, 255, 1);
 		}
 		a:hover {
 			color: $accent-color;
 			text-decoration: none;
 		}
 	}
+	@media (min-width: $screen-sm-min) {
+		position: fixed;
+		z-index: 2;
+	}
+}
+
+.articles {
+	@media (min-width: $screen-sm-min) {
+		margin-top: 136px;
+	}
 }
 
 .spacer {
 	border-top: 5px solid $dark-grey;
 	margin-top: 5px;
+	margin-bottom: 60px;
 }
 
 nav {
+	margin-top: 4px;
 	a {
 		color: $light-grey;
 		// font-family: latoblack;
@@ -76,7 +117,12 @@ nav {
 
 article {
 	margin-bottom: 100px;
+	position: relative;
 	p {
+		margin-bottom: 26px;
+	}
+	img {
+		max-width: 100%;
 		margin-bottom: 26px;
 	}
 }
