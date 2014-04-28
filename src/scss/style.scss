@@ -11,6 +11,16 @@ $off-white: 	#fefefe;
 $light-grey: 	#b6b6b6;
 
 
+html, body {
+	min-height: 100%;
+}
+html {
+	border-left: 5px solid $accent-color;
+	transition: all 0.3s ease;
+	@media (min-width: $screen-sm-min) {
+		border-left-width: 70px;
+	}
+}
 body {
 	font-family: latoregular, "Helvetica Neue", Helvetica, sans-serif, Arial; 
 	text-rendering: optimizeLegibility;
@@ -18,12 +28,7 @@ body {
 	line-height: 26px;
 	color: $dark-grey;
 	background-color: $off-white;
-	border-left: 5px solid $accent-color;
-	padding: 60px 15px 100px 15px;
-	transition: all 0.3s ease;
-	@media (min-width: $screen-sm-min) {
-		border-left-width: 70px;
-	}
+	padding: 60px 15px 100px 15px; 
 	a {
 		color: $accent-color;
 	}
@@ -34,16 +39,24 @@ body {
 }
 
 .logo {
-	@media (min-width: $screen-sm-min) {
-		transition: width 2s ease;
+	@media (min-width: $screen-sm-min) {		
 		position: fixed;
 		z-index: 10;
 		margin: -51px 0 0 -81px;
 		img {
 			width: 60px;
 			height: auto;
+			-webkit-animation: spin 200s infinite ease-out;
+		}
+		img:hover {
+			-webkit-animation: spin 1s 1 ease-out;	
 		}
 	}
+}
+
+@-webkit-keyframes spin {
+    0% {-webkit-transform:rotate(0deg);}
+    100% {-webkit-transform:rotate(360deg);}
 }
 
 .container {
@@ -60,6 +73,13 @@ h1 {
 	line-height: 34px;
 	margin-top: 0px;
 	margin-bottom: 40px;
+	a {
+		color: $dark-grey;
+	}
+	a:hover {
+		color: $accent-color;
+		text-decoration: none;
+	}
 }
 
 header {
@@ -123,6 +143,7 @@ article {
 	}
 	img {
 		max-width: 100%;
+		height: auto;
 		margin-bottom: 26px;
 	}
 }
