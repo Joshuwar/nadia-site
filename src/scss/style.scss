@@ -117,10 +117,33 @@ header {
 	}
 }
 
+.tags-sidebar {
+	a {
+		color: $light-grey;
+		padding: 3px 5px;
+		font-size: 10px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		line-height: 17px;
+		margin: 0px 4px 4px 0px;
+		float: left;
+		transition: all 0.3s ease;
+		&:hover {
+			color: $off-white;
+			background-color: $dark-grey;
+			text-decoration: none;
+		}
+	}
+}
+
+br.clear {
+	clear: both;
+}
+
 .spacer {
 	border-top: 5px solid $dark-grey;
 	margin-top: 5px;
-	margin-bottom: 60px;
+	margin-bottom: 20px;
 }
 
 nav {
@@ -147,3 +170,15 @@ article {
 		margin-bottom: 26px;
 	}
 }
+
+// Bootstrap pagination overrides
+
+.pagination span.current {
+	&:hover {
+		background: transparent;
+		color: $accent-color;
+	}
+}
+
+
+
