@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "../fonts/lato";
+@import "../fonts/borgia";
 
 /*******************
   Project styles
@@ -22,10 +23,10 @@ html {
 	}
 }
 body {
-	font-family: latoregular, "Helvetica Neue", Helvetica, sans-serif, Arial; 
+	font-family: borgia_proregular, "Helvetica Neue", Helvetica, sans-serif, Arial; 
 	text-rendering: optimizeLegibility;
 	font-size: 18px;
-	line-height: 26px;
+	line-height: 28px;
 	color: $dark-grey;
 	background-color: $off-white;
 	padding: 60px 15px 100px 15px; 
@@ -65,12 +66,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: latoblack;
+	font-family: borgia_proregular;
 }
 
 h1 {
 	font-size: 34px;
-	line-height: 34px;
+	line-height: 40px;
 	margin-top: 0px;
 	margin-bottom: 40px;
 	a {
@@ -88,7 +89,7 @@ header {
 	letter-spacing: 0.2em;
 	margin-bottom: 125px;
 	h1 {
-		font-size: 16px;
+		font-size: 14.6px;
 		margin: 0;
 		a {
 			color: $dark-grey;
@@ -141,7 +142,7 @@ br.clear {
 }
 
 .spacer {
-	border-top: 5px solid $dark-grey;
+	border-top: 1px solid $light-grey;
 	margin-top: 5px;
 	margin-bottom: 20px;
 }
@@ -180,5 +181,11 @@ article {
 	}
 }
 
+em, italic, i {
+	font-family: borgia_proitalic;
+}
 
+strong, bold, b {
+	font-family: borgia_probold;
+}
 
